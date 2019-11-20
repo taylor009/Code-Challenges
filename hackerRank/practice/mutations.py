@@ -1,11 +1,11 @@
-def mutate_string(string, position, character):
-    list2 = list(string)
-    list2[position] = character
-    return ''.join(list2)
+def count_substring(string, sub_string):
+    return (sum(
+        [1 for i in range(0, len(string) - len(sub_string) + 1) if (string[i:(len(sub_string) + i)] == sub_string)]))
 
 
 if __name__ == '__main__':
-    s = input()
-    i, c = input().split()
-    s_new = mutate_string(s, int(i), c)
-    print(s_new)
+    string = input().strip()
+    sub_string = input().strip()
+
+    count = count_substring(string, sub_string)
+    print(count)
