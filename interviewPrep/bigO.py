@@ -1,16 +1,16 @@
 import time
 
-nemo = ['nemo']
+nemo = ['nemo'] * 10000000
+fish = ['dory', 'bruce', 'marlin', 'nemo']
 
 
 def findNemo(array):
-    t0 = time.time()
-    i = 0
-    while i < len(array):
-        if array[i] == 'nemo':
-            print('Found Nemo')
-    t1 = time.time()
-    print('Call to find nemo took ' + (t1 - t0) + ' milliseconds')
+    t = time.process_time()
+    for i in array:
+        if i is 'nemo':
+            print('Found Nemo!')
+    elapsed_time = time.process_time() - t
+    print('Call to find Nemo took ' + str(elapsed_time))
 
 
 findNemo(nemo)

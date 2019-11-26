@@ -17,4 +17,4 @@ function findNemo2(fish) {
   console.log("Call to find Nemo took " + (t1 - t0) + " milliseconds.");
 }
 
-findNemo2(everyone);
+findNemo2(large);
