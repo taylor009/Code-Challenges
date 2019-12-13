@@ -1,30 +1,24 @@
 let sequence = [1, 3, 2, 1];
 
 function almostIncreasingSequence(sequence) {
-    if (isIncreasingSequence(sequence)) {
-        return true;
-    }
+    let found = false;
+    for (let i=0; i<sequence.length; i++) {
+        if(sequence[i] <= sequence[i-1]) {
+            if(found) {
+                return false;
+            }
+            found = true;
 
-
-
-    for (let i = 0; i < sequence.length > 0; i++) {
-        let tmpSequence = sequence.slice(0); // copy original array
-
-        tmpSequence.splice(i, 1);
-        if (isIncreasingSequence(tmpSequence)) {
-            return true;
+            if(i === 1 || i + 1 === sequence.length) {
+                continue;
+            }
+            else if (sequence[i] > sequence[i-2]) {
+                sequence[i-1] = sequence[i-2];
+            }
+            else if(sequence[i-1] >= sequence[i+1]) {
+                return false;
+            }
         }
     }
-
-    return false;
-}
-
-function isIncreasingSequence(sequence) {
-    for (let i = 0; i < sequence.length - 1; i++) {
-        if (sequence[i] >= sequence[i + 1]) {
-            return false;
-        }
-    }
-
     return true;
 }
