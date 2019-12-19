@@ -52,7 +52,6 @@ function countingValleys(n, s) {
                 return prev + next;
             });
     }
-
     return valleys;
 }
 
