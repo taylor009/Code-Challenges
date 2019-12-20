@@ -22,18 +22,18 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-// Complete the plusMinus function below.
-function plusMinus(arr) {
-    let positive = arr.filter(number => number > 0).length / arr.length;
-    let negative = arr.filter(number => number < 0).length / arr.length;
-    let zeronums = arr.filter(number => number === 0).length / arr.length;
-    return console.log(positive.toFixed(6) + '\n' + negative.toFixed(6) + '\n' + zeronums.toFixed(6))
+// Complete the staircase function below.
+function staircase(n) {
+    let line = Array(n + 1).fill(' ');
+    line[n] = '\n';
+    for (let i = n - 1; i >= 0; i--) {
+        line[i] = '#';
+        process.stdout.write(line.join(''));
+    }
 }
 
 function main() {
     const n = parseInt(readLine(), 10);
 
-    const arr = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
-
-    plusMinus(arr);
+    staircase(n);
 }
