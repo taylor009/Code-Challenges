@@ -1,8 +1,3 @@
-/**
- * Stacks are LIFO
- * Last In First Out
- */
-
 class Node {
 	constructor(value){
 		this.value = value;
@@ -16,11 +11,9 @@ class Stack {
 		this.bottom = null;
 		this.length = 0;
 	}
-	// First in the stack
 	peek() {
 		return this.top;
 	}
-	// Add node to the top of the stack
 	push(value){
 		const newNode = new Node(value);
 		if (this.length === 0) {
@@ -34,7 +27,6 @@ class Stack {
 		this.length++;
 		return this;
 	}
-	// Remove from the top of the stack
 	pop(){
 		if (!this.top) {
 			return null;
@@ -59,6 +51,7 @@ myStack.peek();
 myStack.pop();
 myStack.pop();
 myStack.pop();
+
 
 //Discord
 //Udemy
