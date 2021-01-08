@@ -1,3 +1,8 @@
+/**
+ * Pros and Cons
+ * Pros: Relationships
+ * Cons: Scaling is hard
+ */
 class Graph {
 	constructor() {
 		this.numberOfNodes = 0;
