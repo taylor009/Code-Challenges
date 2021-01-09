@@ -23,3 +23,11 @@ function fibonacciMaster(){
 		}
 	}
 }
+
+const fasterFib = fibonacciMaster();
+
+// console.log('Slow', fibonacci(35))
+console.log('DP', fasterFib(100));
+// console.log('DP2', fibonacciMaster2(100));
+// console.log('we did ' + calculations + ' calculations');
+
